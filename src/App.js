@@ -4,8 +4,9 @@ import TextForm from './Components/TextForm';
 import About from './Components/About';
 import { useState } from 'react';
 import Alert from './Components/Alert';
-import { BrowserRouter, Route, Switch, Routes } from 'react-router-dom';
-
+// _____________________________________________________________________________________
+// import { BrowserRouter, Route, Switch, Routes } from 'react-router-dom';
+// ________________________________________________________________________________________
 // import {
 //   BrowserRouter,
 //   Switch,
@@ -54,7 +55,8 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+    {/* __________________________________________________________________________________________________ */}
+      {/* <BrowserRouter>
       
           <Routes>
               <Route path="/" element={<Navbar title={"TextUtils"}about={"About"}home={"Home"} mode={mode} toggleMode={toggleMode}/>}>
@@ -66,7 +68,11 @@ function App() {
                   <Route path="/about" element={<About mode={mode}/>}/>  
               </Route>
           </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+      {/* __________________________________________________________________________________________________ */}
+      <Navbar title="Text Utils" home="Home" about="About"    mode={mode} toggleMode={toggleMode}/>
+      <Alert mode={mode} toggleMode={toggleMode}/>
+      <TextForm mode={mode} toggleMode={toggleMode}/>
     </>
   );
 }
